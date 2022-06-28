@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    --primary-color: #FF6060;
+    --location-section-bg : #F6F6F6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/***** HEADER *****/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 0 100px;
+}
+
+.kasa-logo {
+    height: 68px;
+    width: 210px;
+    margin-left: 70px;
+    margin-top: 40px;
+}
+
+.navbar {
+    margin-right: 70px;
+    position: relative;
+}
+.nav-link {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 24px;
+    margin-left: 57px;
+}
+.nav-active {
+    text-decoration: underline;
+}
+
+
+
+/**** IMG HOME ****/
+.img-home {
+    display: flex;
+    justify-content: center;
+    height: 223px;
+    width: 100%;
+    margin-top: 80px;
+    position: relative;
+}
+.home-img {
+    border-radius: 25px;
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+}
+.title-img {
+    display: flex;
+    top: 90px;
+    font-size: 48px;
+    font-weight: 500;
+    position: absolute;
+    color: #fff;
+}
+
+/***** LOCATIONS *****/
+.location-section {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    margin: 43px 0;
+    width: 100%;
+
+}
+.location-section-div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 60px;
+    grid-row-gap: 50px;
+    padding: 56px 50px;
+    width: 85%;
+    background-color: var(--location-section-bg);
+    border-radius: 25px;
+    overflow: hidden;
+}
+.location {
+    height: 340px;
+    width: 340px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+.location-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+.location-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 50%;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+
+/**** PAGE 404 ****/
+.section-404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title-404 {
+    font-weight: 700;
+    font-size: clamp(99px, 20vw, 288px);
+    margin-top: 174px;
+    color: var(--primary-color);
+}
+.p-container-404 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.p-404 {
+    font-weight: 500;
+    font-size: clamp(18px, 5vw, 36px);
+    color: var(--primary-color);
+    margin-top: 66px;
+    text-align: center;
+}
+.a-404 {
+    font-weight: 500;
+    font-size: clamp(14px, 2vw, 18px);
+    color: var(--primary-color);
+    margin-top: 182px;
+    text-decoration: underline;
+}
+
+@media (max-width: 960px) {
+    .p-404 {
+        margin: 66px 56px;
+    }
+    .a-404 {
+        margin-top: 133px;
+    }
+}
+
+
+/****About page ****/
+.accordeon {
+    width: 80%;
+    margin-bottom: 33px;
+}
+.accordeon-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    height: 47px;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+.accordeon-header h3 {
+    font-weight: 500;
+    font-size: 24px;
+    margin-left: 18px;
+}
+.btn-chevron {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0 5px;
+}
+.about-reply {
+    background: var(--location-section-bg);
+    padding-top: 27px;
+}
+.about-reply p {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 34px;
+    color: var(--primary-color);
+    margin-left: 18px;
+}

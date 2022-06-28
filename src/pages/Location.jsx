@@ -1,8 +1,13 @@
 import React from 'react'
+import Carousel from "../components/LocationPageComponents/Carousel";
+import locations from "../data/data.json";
 
 const Location = () => {
   return (
-    <div>Location</div>
+    <div>
+      <Carousel />
+      
+    </div>
   )
 }
 
