@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Tag = () => {
+const Tag = ({value}) => {
   return (
-    <div>Tag</div>
+    <div>{value}</div>
   )
 }
 

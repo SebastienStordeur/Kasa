@@ -7,20 +7,22 @@ const Accordeon = ({ question }) => {
     const { title, reply } = question;
 
 
-  return (
-    <div className="accordeon">
-        <header className="accordeon-header">
-            <h3>{title}</h3>
-            <button className="btn-chevron" onClick={() => setShowReply(!showReply)}>
-                <img src={showReply ? ChevronUp : ChevronDown} alt="close/open"/>
-            </button>
-        </header>
-        
-        {showReply && <div className="about-reply">
-            <p>{reply}</p>
-        </div>}
-    </div>
-  )
+    return (
+        <div className="accordeon">
+            <header className="accordeon-header">
+                <h3>{title}</h3>
+                <button 
+                    className="btn-chevron" 
+                    onClick={() => setShowReply(!showReply)}
+                >
+                    <img src={showReply ? ChevronUp : ChevronDown} alt="close/open"/>
+                </button>
+            </header>
+            {showReply && <div className="about-reply">
+                <p>{reply}</p>
+            </div>}
+        </div>
+    )
 }
 
 export default Accordeon
