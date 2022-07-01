@@ -6,7 +6,6 @@
     --primary-color: #FF6060;
     --location-section-bg : #F6F6F6;
 }
-
 a {
     color: inherit;
     text-decoration: none;
@@ -19,18 +18,17 @@ a {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    margin: 0 10%;
+    max-width: 1240px;
+    margin: 0 auto;
     height: 100px;
 }
-
 .kasa-logo {
     height: 68px;
     width: 210px;
-    margin-left: 70px;
+   
 }
-
 .navbar {
-    margin-right: 70px;
+    
     position: relative;
 }
 .nav-link {
@@ -42,7 +40,6 @@ a {
 .nav-active {
     text-decoration: underline;
 }
-
 @media (max-width: 1000px) {
     .header {
         margin: 0 20px;
@@ -55,11 +52,12 @@ a {
     .navbar {
         margin-right: 0;
     }
+}
+@media (max-width:700px) {
     .nav-link {
         margin-left: 10px;
     }
 }
-
 /**** FOOTER ****/
 .footer {
     display: flex;
@@ -84,34 +82,55 @@ a {
     display: flex;
     justify-content: center;
     height: 223px;
-    width: 100%;
-    margin-top: 80px;
+    max-width: 1440px;
+    margin:80px auto 0;
     position: relative;
 }
 .banner {
     border-radius: 25px;
-    width: 80%;
+    max-width: 1240px;
     height: 223px;
     overflow: hidden;
     position: relative;
+    filter: brightness(80%);
 }
 .title-img {
     display: flex;
     top: 90px;
-    font-size: 48px;
+    font-size: clamp(24px, 7vw, 48px);
     font-weight: 500;
     position: absolute;
     color: #fff;
+}
+
+@media( max-width: 700px) {
+    .div-banner {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+        height: 111px;
+        justify-content: initial;
+    }
+    .banner {
+        min-width: 315px;
+        height: 111px;
+        border-radius: 10px;
+    }
+    .title-img {
+        text-align: left;
+        font-size: 24px;
+        top: 30px;
+        left: 16px;
+        right: 82px;
+    }
 }
 
 /***** LOCATIONS *****/
 .location-section {
     display: flex;
     justify-content: center;
-    padding: 50px;
-    margin: 43px 0;
-    width: 100%;
-
+    margin: 43px auto;
+    max-width: 1440px;
 }
 .location-section-div {
     display: grid;
@@ -119,7 +138,7 @@ a {
     grid-column-gap: 60px;
     grid-row-gap: 50px;
     padding: 56px 50px;
-    width: 85%;
+    max-width: 1240px;
     background-color: var(--location-section-bg);
     border-radius: 25px;
     overflow: hidden;
@@ -146,8 +165,33 @@ a {
     font-size: 18px;
     font-weight: 500;
 }
-
-
+@media (max-width: 1240px) {
+    .location-section-div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 856px) {
+    .location-section-div {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        background-color: #fff;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .location {
+        height: 255px;
+        width: 315px;
+    }
+}
+@media(max-width:700px) {
+    .location-section {
+        margin-top: 0;
+    }
+    .location-section-div {
+        grid-template-columns: repeat(1, 1fr);
+        padding-top: 22px;
+    }
+}
 
 /**** PAGE 404 ****/
 .section-404 {
