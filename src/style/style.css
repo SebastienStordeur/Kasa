@@ -319,3 +319,71 @@ a {
         width: 100%;
     }
 }
+
+/****PAGE LOGEMENT****/
+
+.carousel {
+    max-width: 1240px;
+    height: 415px;
+    margin: 37px auto;
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.carousel-img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+.carousel-btn {
+    width: 47px;
+    height: 80px;
+    color: black;
+    position: absolute;
+    top: 40%;
+    z-index: 2;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+.previous-btn {
+    left: 24px;
+}
+.next-btn {
+    right: 24px;
+}
+
+.location-basic-infos {
+    margin-top: 30px;
+    max-width: 1240px;
+    margin: auto;
+}
+.location-basic-infos h1 {
+    font-weight: 500;
+    font-size: clamp(18px, 8vw, 36px);
+    color: var(--primary-color);
+}
+.location-basic-infos-location {
+    font-weight: 500;
+    font-size: clamp(14px, 8vw, 18px);
+    color: var(--primary-color);
+}
+.tag-container {
+    display: flex;
+    max-width: 1240px;
+    margin: 20px auto 0;
+}
+.tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: #fff;
+    min-width: 115px;
+    height: 25px;
+    padding: 0 30px;
+    font-size: clamp(10px, 3vw, 14px);
+    margin-right: 10px;
+    border-radius: 10px;
+}

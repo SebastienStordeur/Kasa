@@ -2,7 +2,7 @@ import React from 'react'
 
 const Tag = ({value}) => {
   return (
-    <div>{value}</div>
+    <div className="tag">{value}</div>
   )
 }
 

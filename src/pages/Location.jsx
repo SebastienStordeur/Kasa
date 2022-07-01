@@ -8,10 +8,14 @@ const Location = () => {
   const { id } = useParams();
   const [currentLocation, setCurrentLocation] = useState();
 
-  useEffect(() => {
+  const getLocation = (id) => {
     for(let location of locations) {
-      if(location.id === id) setCurrentLocation(location)
+      if(location.id === id) return setCurrentLocation(location)
     }
+  }
+
+  useEffect(() => {
+    getLocation(id);
   }, [id]);
 
   console.log(currentLocation)
@@ -22,15 +26,16 @@ const Location = () => {
     <div>
       
       <Carousel pictures={currentLocation.pictures}/>
-      <p>{currentLocation.id}</p>
       <div className="location-basic-infos">
         <h1>{currentLocation.title}</h1>
-        <h3>{currentLocation.location}</h3>
+        <h3 className="location-basic-infos-location">{currentLocation.location}</h3>
       </div>
-      {currentLocation.tags.map(tag => {
-        console.log(tag)
-        return <Tag value={tag}/> 
-      })}
+      <div className="tag-container">
+        {currentLocation.tags.map(tag => {
+          return <Tag value={tag}/> 
+        })}
+      </div>
+
 
       {/* <h3>{currentLocation.host}</h3> */}
       {/* <h1>{currentLocation.title}</h1> */}
