@@ -3,7 +3,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import About from "./pages/About";
 import Home from "./pages/Home";
-import Location from "./pages/Location";
+import LocationPage from "./pages/LocationPage";
 import Page404 from "./pages/Page404";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <Header/>
         <Routes>
           <Route path="/" element={<Home/>} />
-          <Route path="/location/:id" element={<Location/>} />
+          <Route path="/location/:id" element={<LocationPage/>} />
           <Route path="/about" element={<About/>} />
           <Route path="*" element={<Page404/>} />
         </Routes>

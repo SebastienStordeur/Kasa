@@ -355,11 +355,13 @@ a {
 }
 
 .location-basic-infos {
+    display: flex;
+    justify-content: space-between;
     margin-top: 30px;
     max-width: 1240px;
     margin: auto;
 }
-.location-basic-infos h1 {
+.location-infos h1 {
     font-weight: 500;
     font-size: clamp(18px, 8vw, 36px);
     color: var(--primary-color);
@@ -368,6 +370,24 @@ a {
     font-weight: 500;
     font-size: clamp(14px, 8vw, 18px);
     color: var(--primary-color);
+}
+.host-box {
+    display: flex;
+}
+.host-box h2 {
+    display: flex;
+    text-align: right;
+    align-items: center;
+    font-size: clamp(12px, 4vw, 18px);
+    font-weight: 500;
+    color: var(--primary-color);
+    max-width: 93px;
+    margin-right: 10px;
+}
+.host-img {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
 }
 .tag-container {
     display: flex;
@@ -386,4 +406,12 @@ a {
     font-size: clamp(10px, 3vw, 14px);
     margin-right: 10px;
     border-radius: 10px;
+}
+.more-infos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: 96px;
+    max-width: 1240px;
+    margin-top: 26px;
+    margin-left: 11%;
 }
