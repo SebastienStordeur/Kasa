@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, Fragment} from 'react'
 import { useParams } from 'react-router-dom';
 import Carousel from "../components/LocationPageComponents/Carousel";
 import locations from "../data/data.json";
-import Tag from "../components/LocationPageComponents/Tag";
 import Accordeon from '../components/Accordeon';
+import Infos from '../components/LocationPageComponents/Infos';
 
 const LocationPage = () => {
   const { id } = useParams();
@@ -19,36 +19,20 @@ const LocationPage = () => {
     getLocation()
   }, [id]);
 
-  console.log(currentLocation)
-
-  return (
-    <div>
-      <Carousel pictures={currentLocation.pictures}/>
-      <div className="location-basic-infos">
-        <div className="location-infos">
-          <h1>{currentLocation.title}</h1>
-          <h3 className="location-basic-infos-location">{currentLocation.location}</h3>
+    return (
+      <Fragment>
+        <Carousel pictures={currentLocation.pictures} key={"Carousel"}/>
+        <Infos currentLocation={currentLocation}/>
+  
+        <div className="more-infos">
+          <Accordeon content={{title: "Description", reply: currentLocation.description }} />
+          <Accordeon content={{title: "Équipements", equipments: currentLocation.equipments }} />
         </div>
-        <div className="host-infos">
-          <div className="host-box">
-            <h2>{currentLocation.host.name}</h2>
-            <img src={currentLocation.host.picture} alt={currentLocation.host.name} className="host-img"/>
-          </div>
-          
-        </div>
-      </div>
-      <div className="tag-container">
-        {currentLocation.tags.map(tag => {
-          return <Tag value={tag}/> 
-        })}
-      </div>
-      <div className="more-infos">
-        <Accordeon question={{title: "description", reply: currentLocation.description }} />
-        <Accordeon question={{title: "Équipements", reply: currentLocation.equipments }} />
-      </div>
+  
+      </Fragment>
+    )
 
-    </div>
-  )
+
 }
 
 export default LocationPage

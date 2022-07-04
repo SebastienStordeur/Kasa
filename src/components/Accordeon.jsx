@@ -4,7 +4,8 @@ import ChevronUp from "../assets/Chevron_Up.svg";
 
 const Accordeon = ({ content }) => {
     const [showReply, setShowReply] = useState(false);
-    const { title, reply } = content;
+    const { title, reply, equipments } = content;
+    console.log(content.equipments)
 
     return (
         <div className="accordeon">
@@ -20,6 +21,10 @@ const Accordeon = ({ content }) => {
             {showReply && <div className="about-content">
                 <p>{reply}</p>
             </div>}
+{/*             {equipments.map(equipment => {
+                return <span>{equipment}</span>
+            })} */}
+            
         </div>
     )
 }

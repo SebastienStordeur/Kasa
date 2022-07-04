@@ -22,7 +22,7 @@ const Carousel = ({ pictures }) => {
       </button>
       <img src={pictures[index]} alt="Logement" className="carousel-img"/>
       <button className="next-btn carousel-btn" onClick={showNextPhoto}>
-        <img src={ChevronRight} alt="Previous" />
+        <img src={ChevronRight} alt="Next" />
       </button>
     </div>
   )

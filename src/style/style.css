@@ -281,6 +281,8 @@ a {
     width: 15px;
 }
 .about-content {
+    display: flex;
+    flex-direction: column;
     padding: 17px 27px 19px 18px;
     color: var(--primary-color);
     background: var(--section-bg);
@@ -296,5 +298,154 @@ a {
 @media (min-width:800px) {
     .about-img {
         border-radius: 25px;
+    }
+}
+
+/***Logement page ***/
+
+.carousel {
+    overflow: hidden;
+    width: 90%;
+    height: 255px;
+    margin: 30px auto 15px;
+    max-width: 1240px;
+    position: relative;
+    border-radius: 10px;
+}
+.carousel-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+.carousel-btn {
+    position: absolute;
+    top: 45%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+}
+.carousel-btn img {
+    height: 20px;
+    width: 12px;
+}
+.previous-btn {
+    left:6px;
+}
+.next-btn {
+    right: 6px;
+}
+
+.location-basic-infos {
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+    color: var(--primary-color);
+}
+.location-infos h1 {
+    font-weight: 500;
+    font-size: clamp(18px, 4vw, 36px);
+}
+.location-infos-location {
+    font-weight: 500;
+    font-size: clamp(14px, 4vw, 18px);
+}
+.tag-container {
+    display: flex;
+    margin-top: 12px;
+}
+.tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 84px;
+    height: 22px;
+    padding: 0 20px;
+    margin-right: 10px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: clamp(10px, 1vw, 14px);
+}
+.host-infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+}
+.host-box {
+    display: flex;
+}
+.host-img {
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 11px;
+}
+.host-box h2 {
+    text-align: end;
+    max-width: 93px;
+    font-weight: 500;
+    font-size: 14px;
+}
+.more-infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 16px auto 150px;
+}
+.star-active {
+    fill: var(--primary-color);
+}
+@media(min-width:800px) {
+    .carousel {
+        height: 415px;
+    }
+    .carousel-btn img {
+        height: 79px;
+        width: 47px;
+    }
+    .previous-btn {
+        left: 23px;
+    }
+    .next-btn {
+        right: 23px;
+    }
+    .location-infos h1 {
+        max-width: 600px;
+    }
+    .more-infos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 76px;
+        max-width: 1240px;
+    }
+    .more-infos .about-content {
+        min-height: 240px;
+    }
+    .host-infos {
+        flex-direction: column;
+        position: relative;
+    }
+    .host-box {
+        position: absolute;
+        right: 0;
+        top: -150px;
+    }
+    .host-box h2 {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    .host-img {
+        height: 64px;
+        width: 64px;
+    }
+    .tag {
+        height: 25px;
+        border-radius: 10px;
     }
 }
