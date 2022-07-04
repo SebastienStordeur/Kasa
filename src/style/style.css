@@ -221,3 +221,80 @@ a {
 
 
 /***About page ****/
+.about-img {
+    box-sizing: border-box;
+    width: 90%;
+    max-width: 1240px;
+    height: 223px;
+    overflow: hidden;
+    margin: 17px auto 0;
+    border-radius: 10px;
+    position: relative;
+    filter: brightness(90%);
+}
+.about-image-banner {
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.about-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 168px;
+}
+.about-container {
+    width: 90%;
+    max-width: 1023px;
+    margin: auto;
+}
+.accordeon {
+    margin-top: 31px;
+    overflow: hidden;
+    min-width: 335px;
+    max-width: 1023px;
+}
+.accordeon-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: #fff;
+
+    height: 30px;
+    padding: 0 17px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.accordeon-header h3 {
+    font-weight: 500;
+    font-size: clamp(13px, 4vw, 28px);
+}
+.btn-chevron {
+    background: var(--primary-color);
+    border: none;
+    cursor: pointer;
+}
+.chevron {
+    height: 9px;
+    width: 15px;
+}
+.about-content {
+    padding: 17px 27px 19px 18px;
+    color: var(--primary-color);
+    background: var(--section-bg);
+    font-weight: 400;
+    font-size: clamp(12px, 4vw, 24px);
+    border-radius: 5px;
+}
+@media (min-width:420px) {
+    .accordeon-header {
+        height: 47px;
+    }
+}
+@media (min-width:800px) {
+    .about-img {
+        border-radius: 25px;
+    }
+}
