@@ -5,8 +5,10 @@ import Navbar from './Navbar'
 const Header = () => {
   return (
     <header id="header" className="header">
+      <div className="header-container">
         <img src={Logo} alt="Kasa Logo" className="kasa-logo"/>
         <Navbar />
+      </div>
     </header>
   )
 }
