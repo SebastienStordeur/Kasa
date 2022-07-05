@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
-import ChevronRight from "../../assets/Chevron_Right.svg"
-import ChevronLeft from "../../assets/Chevron_Left.svg"
+import { ChevronLeft, ChevronRight } from '../../assets'
 
 const Carousel = ({ pictures }) => {
   const [index, setIndex] = useState(0);

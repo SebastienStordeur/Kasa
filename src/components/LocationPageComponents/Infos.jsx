@@ -1,6 +1,5 @@
-import React from 'react'
-import Tag from './Tag'
-import Rating from './Rating'
+import React from "react";
+import { Tag, Rating } from "../LocationPageComponents";
 
 const Infos = ({currentLocation}) => {
     
@@ -12,7 +11,7 @@ const Infos = ({currentLocation}) => {
         </div>
         <div className="tag-container">
             {currentLocation.tags.map(tag => {
-            return <Tag value={tag}/> 
+            return <Tag value={tag} key={tag}/> 
             })}
         </div>
         <div className="host-infos">

@@ -289,6 +289,7 @@ a {
     font-weight: 400;
     font-size: clamp(12px, 4vw, 24px);
     border-radius: 5px;
+    line-height: 26px;
 }
 @media (min-width:420px) {
     .accordeon-header {
@@ -401,9 +402,15 @@ a {
 .star-active {
     fill: var(--primary-color);
 }
+@media (min-width:420px) {
+    .more-infos .accordeon {
+        width: 100%;
+    }
+}
 @media(min-width:800px) {
     .carousel {
         height: 415px;
+        border-radius: 25px;
     }
     .carousel-btn img {
         height: 79px;
@@ -434,7 +441,7 @@ a {
     .host-box {
         position: absolute;
         right: 0;
-        top: -150px;
+        top: -140px;
     }
     .host-box h2 {
         font-size: 18px;
@@ -447,5 +454,14 @@ a {
     .tag {
         height: 25px;
         border-radius: 10px;
+    }
+    .star-container {
+        position: absolute;
+        right: 0;
+        top: -55px;
+    }
+    .star {
+        height: 30px;
+        width: 30px;
     }
 }

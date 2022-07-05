@@ -1,9 +1,8 @@
 import React, {useState, useEffect, Fragment} from 'react'
 import { useParams } from 'react-router-dom';
-import Carousel from "../components/LocationPageComponents/Carousel";
 import locations from "../data/data.json";
-import Accordeon from '../components/Accordeon';
-import Infos from '../components/LocationPageComponents/Infos';
+import { Carousel, Infos } from "../components/LocationPageComponents"
+import { Accordeon } from '../components';
 
 const LocationPage = () => {
   const { id } = useParams();

@@ -1,11 +1,9 @@
 import React, {useState} from 'react'
-import ChevronDown from "../assets/Chevron_Down.svg";
-import ChevronUp from "../assets/Chevron_Up.svg";
+import { ChevronDown, ChevronUp } from '../assets';
 
 const Accordeon = ({ content }) => {
     const [showReply, setShowReply] = useState(false);
     const { title, reply, equipments } = content;
-    console.log(content.equipments)
 
     return (
         <div className="accordeon">
@@ -18,12 +16,14 @@ const Accordeon = ({ content }) => {
                     <img src={showReply ? ChevronUp : ChevronDown} alt="close/open" className="chevron"/>
                 </button>
             </header>
-            {showReply && <div className="about-content">
+            {showReply && reply && <div className="about-content">
                 <p>{reply}</p>
             </div>}
-{/*             {equipments.map(equipment => {
-                return <span>{equipment}</span>
-            })} */}
+            {showReply && equipments && <div className="about-content">
+                {equipments.map(equipment => {
+                    return <span key={equipment}>{equipment}</span>
+                })}
+            </div>}
             
         </div>
     )

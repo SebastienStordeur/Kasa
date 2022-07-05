@@ -1,5 +1,5 @@
 import React from 'react'
-import Location from './Location'
+import { Location } from "../components";
 import locations from "../data/data.json";
 
 const HomeLocationSection = () => {
