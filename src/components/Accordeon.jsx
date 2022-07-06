@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 import { ChevronDown, ChevronUp } from '../assets';
+import PropTypes from "prop-types";
 
 const Accordeon = ({ content }) => {
     const [showReply, setShowReply] = useState(false);
     const { title, reply, equipments } = content;
-
     return (
         <div className="accordeon">
             <header className="accordeon-header">
@@ -27,6 +27,14 @@ const Accordeon = ({ content }) => {
             
         </div>
     )
+}
+
+Accordeon.propTypes = {
+    content: PropTypes.shape({
+        title: PropTypes.string,
+        reply: PropTypes.string,
+        equipments: PropTypes.array,
+    })
 }
 
 export default Accordeon

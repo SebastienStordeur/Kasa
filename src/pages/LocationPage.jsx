@@ -1,4 +1,4 @@
-import React, {useState, useEffect, Fragment} from 'react'
+import React, {Fragment} from 'react'
 import { useParams } from 'react-router-dom';
 import locations from "../data/data.json";
 import { Carousel, Infos } from "../components/LocationPageComponents"
@@ -6,32 +6,18 @@ import { Accordeon } from '../components';
 
 const LocationPage = () => {
   const { id } = useParams();
-  const [currentLocation, setCurrentLocation] = useState();
-
-  const getLocation = () => {
-    for(let location of locations) {
-      if(location.id === id) return setCurrentLocation(location)
-    };
-  };
-
-  useEffect(() => {
-    getLocation()
-  }, [id]);
+  const location = locations.find(location => location.id === id)
 
     return (
       <Fragment>
-        <Carousel pictures={currentLocation.pictures} key={"Carousel"}/>
-        <Infos currentLocation={currentLocation}/>
-  
+        <Carousel pictures={location.pictures} key={"Carousel"}/>
+        <Infos currentLocation={location}/>
         <div className="more-infos">
-          <Accordeon content={{title: "Description", reply: currentLocation.description }} />
-          <Accordeon content={{title: "Équipements", equipments: currentLocation.equipments }} />
+          <Accordeon content={{title: "Description", reply: location.description }} />
+          <Accordeon content={{title: "Équipements", equipments: location.equipments }} />
         </div>
-  
       </Fragment>
     )
-
-
 }
 
 export default LocationPage

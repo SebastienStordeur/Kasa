@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { ChevronLeft, ChevronRight } from '../../assets'
+import PropTypes from "prop-types";
 
 const Carousel = ({ pictures }) => {
   const [index, setIndex] = useState(0);
@@ -25,6 +26,10 @@ const Carousel = ({ pictures }) => {
       </button>
     </div>
   )
+}
+
+Carousel.propTypes = {
+  pictures: PropTypes.array,
 }
 
 export default Carousel

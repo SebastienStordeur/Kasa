@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-/* import PropTypes from "prop-types";
- */
+import PropTypes from "prop-types";
+
 const LocationCard = ({ location }) => {
     const { title, id, cover } = location;
     return (
@@ -14,12 +14,12 @@ const LocationCard = ({ location }) => {
     )
 }
 
-/* Location.propTypes = {
-    location: React.PropTypes.shape({
-        id: PropTypes.number,
+LocationCard.propTypes = {
+    location: PropTypes.shape({
+        id: PropTypes.string,
         title: PropTypes.string,
         cover: PropTypes.string
     })
-} */
+}
 
 export default LocationCard
