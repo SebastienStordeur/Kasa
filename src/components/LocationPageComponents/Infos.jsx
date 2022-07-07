@@ -7,22 +7,25 @@ const Infos = ({currentLocation}) => {
     
     return (
     <div className="location-basic-infos">
-        <div className="location-infos">
-            <h1>{title}</h1>
-            <h3 className="location-infos-location">{location}</h3>
-        </div>
-        <div className="tag-container">
-            {tags.map(tag => {
-            return <Tag value={tag} key={tag}/> 
-            })}
-        </div>
-        <div className="host-infos">
-            <div className="ratings">
-                <Rating rating={rating}/>
+        <div className="location-container">
+            <div className="location-infos">
+                <h1>{title}</h1>
+                <h3 className="location-infos-location">{location}</h3>
+                <div className="tag-container">
+                    {tags.map(tag => {
+                    return <Tag value={tag} key={tag}/> 
+                    })}
+                </div>
             </div>
-            <div className="host-box">
-                <h2>{host.name}</h2>
-                <img src={host.picture} alt={host.name} className="host-img"/>
+
+            <div className="host-infos">
+                <div className="ratings">
+                    <Rating rating={rating}/>
+                </div>
+                <div className="host-box">
+                    <h2>{host.name}</h2>
+                    <img src={host.picture} alt={host.name} className="host-img"/>
+                </div>
             </div>
         </div>
     </div>

@@ -24,7 +24,6 @@ const Accordeon = ({ content }) => {
                     return <span key={equipment}>{equipment}</span>
                 })}
             </div>}
-            
         </div>
     )
 }

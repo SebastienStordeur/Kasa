@@ -402,6 +402,11 @@ a {
 .star-active {
     fill: var(--primary-color);
 }
+
+.location-container {
+    display: flex;
+    flex-direction: column;
+}
 @media (min-width:420px) {
     .more-infos .accordeon {
         width: 100%;
@@ -425,23 +430,28 @@ a {
     .location-infos h1 {
         max-width: 600px;
     }
-    .more-infos {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 76px;
+    .more-infos {  
+        flex-direction: row;
+        align-items: flex-start;
         max-width: 1240px;
     }
+    .more-infos > .accordeon ~ .accordeon{
+        margin-left: 76px;
+    }
     .more-infos .about-content {
-        min-height: 240px;
+        min-height: 200px;
     }
     .host-infos {
-        flex-direction: column;
+        flex-direction: column-reverse;
         position: relative;
     }
+    .location-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
     .host-box {
-        position: absolute;
-        right: 0;
-        top: -140px;
+        display: flex;
+        margin-top: -10px;
     }
     .host-box h2 {
         font-size: 18px;
@@ -454,14 +464,11 @@ a {
     .tag {
         height: 25px;
         border-radius: 10px;
-    }
-    .star-container {
-        position: absolute;
-        right: 0;
-        top: -55px;
+        margin-top: 20px;
     }
     .star {
         height: 30px;
         width: 30px;
     }
+
 }
