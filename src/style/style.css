@@ -439,7 +439,7 @@ a {
         margin-left: 76px;
     }
     .more-infos .about-content {
-        min-height: 200px;
+        min-height: 250px;
     }
     .host-infos {
         flex-direction: column-reverse;
