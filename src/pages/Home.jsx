@@ -3,10 +3,10 @@ import { HomeImage, HomeLocationSection } from "../components"
 
 const Home = () => {
   return (
-    <div>
+    <main>
       <HomeImage/>
       <HomeLocationSection/>
-    </div>
+    </main>
   )
 }
 
