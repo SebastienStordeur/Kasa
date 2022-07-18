@@ -4,7 +4,6 @@ import { About, Home, LocationPage, Page404 } from "./pages";
 
 function App() {
   return (
-    <>
       <BrowserRouter>
         <Header/>
         <Routes>
@@ -15,7 +14,6 @@ function App() {
         </Routes>
         <Footer/>
       </BrowserRouter>
-    </>
   );
 }
 
